@@ -1,38 +1,15 @@
 package model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-@Entity
-@Table(name = "COURT")
-public class Court {
+public class Court implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
-    @Version
-    private long version;
 
     private String name;
 
     private Structure structure;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public long getVersion() {
-        return version;
-    }
-
-    public void setVersion(long version) {
-        this.version = version;
-    }
 
     public String getName() {
         return name;

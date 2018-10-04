@@ -16,7 +16,7 @@ import javax.faces.validator.ValidatorException;
 public class PasswordMatchesValidator implements Validator{
     @Override
     public void validate(FacesContext facesContext, UIComponent uiComponent, Object o) throws ValidatorException {
-
+/*
         String pw = o.toString();
         PersonController personController = BeanUtil.getBean("personController");
         if(!pw.matches(personController.getPerson().getPassword())){
@@ -24,6 +24,6 @@ public class PasswordMatchesValidator implements Validator{
                     new FacesMessage("Die eingegebenen Passwörter stimmen nicht überein","Die eingegebenen Passwörter stimmen nicht überein");
             msg.setSeverity(FacesMessage.SEVERITY_ERROR);
             throw new ValidatorException(msg);
-        }
+        }*/
     }
 }

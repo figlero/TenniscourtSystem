@@ -14,7 +14,7 @@ import javax.faces.event.AjaxBehaviorEvent;
 @ManagedBean
 public class PersonController {
 
-    Person person;
+    /*Person person;
     PersonDAOImpl personDAO;
 
     public PersonController(){
@@ -53,5 +53,5 @@ public class PersonController {
 
     public void setPerson(Person person) {
         this.person = person;
-    }
+    }*/
 }

@@ -17,7 +17,7 @@ import javax.faces.bean.ManagedBean;
 @ManagedBean
 public class HibernateUtil {
 
-    SessionFactory sessionFactory;
+   /* SessionFactory sessionFactory;
     Session session;
 
     public HibernateUtil(){
@@ -41,5 +41,5 @@ public class HibernateUtil {
             session = sessionFactory.openSession();
             return session;
         }
-    }
+    }*/
 }
