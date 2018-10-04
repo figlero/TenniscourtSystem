@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Login</title>
+    <h:outputStylesheet library="css" name="materialize.css"></h:outputStylesheet>
+    <h:outputStylesheet library="css" name="common.css"></h:outputStylesheet>
+    <link  href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <h:outputScript library="js" name="materialize.min.js"></h:outputScript>
+    <h:outputScript library="js" name="common.js"></h:outputScript>
+</h:head>
+
+<h:body>
+    <ui:include src="header.xhtml"></ui:include>
+   <h:form style="margin-top: 50px">
+       <div class="ui-g">
+           <div class="ui-g-4"></div>
+           <div class="ui-g-4">
+               <p:panel>
+                   <div class="row">
+                   <p:inputText placeholder="Benutzername:" required="true" id="inputUser" requiredMessage="Dieses Feld ist ein Pflichtfeld" value="#{personController.person.name}">
+                   </p:inputText>
+                       <h:message for="inputUser" id="msgInputUser" class="message"/>
+                   </div>
+                   <div class="row">
+                       <p:password placeholder="Passwort:"  required="true" id="inputPassword" requiredMessage="Dieses Feld ist ein Pflichtfeld" value="#{personController.person.password}">
+                       </p:password>
+                       <h:message for="inputPassword" id="msgInputPassword" class="message"/>
+                   </div>
+                   <div class="row">
+                       <p:commandButton class="btn waves-effect waves-light" value="Login" style="background: #689f38; color:white; font-size: 1em; font-weight: normal; text-shadow: none">
+                           <p:ajax event="click" process="@form" update="@form" listener="#{personController.login}"/>
+                       </p:commandButton>
+                       <a href="register.xhtml" class="waves-effect waves-light btn" style="background: #33691e; color:white; font-size: 1em">Register</a>
+                   </div>
+               </p:panel>
+           </div>
+           <div class="ui-g-4"></div>
+       </div>
+   </h:form>
+    <ui:include src="footer.xhtml"></ui:include>
+</h:body>
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Login</title>
+    <h:outputStylesheet library="css" name="materialize.css"></h:outputStylesheet>
+    <h:outputStylesheet library="css" name="common.css"></h:outputStylesheet>
+    <link  href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <h:outputScript library="js" name="materialize.min.js"></h:outputScript>
+</h:head>
+
+<h:body>
+    <ui:include src="header.xhtml"></ui:include>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header"><i class="material-icons">wb_sunny</i>Platz1</div>
+            <div class="collapsible-body" style="background: white"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">wb_sunny</i>Platz2</div>
+            <div class="collapsible-body" style="background: white"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">wb_sunny</i>Platz3</div>
+            <div class="collapsible-body" style="background: white"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+    </ul>
+    <ui:include src="footer.xhtml"></ui:include>
+
+    <!--script-->
+    <script type="application/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems);
+        });
+    </script>
+</h:body>
+</html>
